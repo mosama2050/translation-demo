@@ -1,10 +1,12 @@
-<button (click)="useLanguage('en')">english</button>
-<br>
-<br>
-<button (click)="useLanguage('ar')">عربي</button>
-<br>
+<div dir={{direction}}  >
+<div class="Row"  >
+  <button class="btnl" (click)="useLanguage('en')">english</button>
 
-<div>
+<button class="btnr" (click)="useLanguage('ar')">عربي</button>
+<br>
+</div>
+  <br><br>
+<div  >
   <h1>{{ 'demo.title' | translate }}</h1>
 
   <!-- translation: translation pipe -->
@@ -26,3 +28,4 @@
 
 <!-- translation: directive (key as content of element)-->
 <p translate [translateParams]="{name: mName}">demo.greeting</p>
+</div>

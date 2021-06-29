@@ -9,6 +9,7 @@ import {TranslateService} from "@ngx-translate/core";
 export class AppComponent {
   title = 'translate';
   mName='Mohamed';
+  direction='ltr';
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
@@ -18,8 +19,10 @@ export class AppComponent {
   useLanguage(language: string): void {
     if(language=="ar"){
       this.mName="محمد"
+      this.direction="rtl"
     }else {
-      this.mName="Mohamed"
+      this.mName="Mohamed";
+      this.direction="ltr"
     }
     this.translate.use(language);
   }
